@@ -90,7 +90,7 @@ jobs:
         prefix: ${{ env.OPENWRT_PATH }}
     - name: Install Appfilter
       run: |
-         cd package
+         cd $OPENWRT_PATH
           mikdir openwrt-packages
           cd openwrt-packages
           git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
