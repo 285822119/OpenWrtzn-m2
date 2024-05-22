@@ -88,7 +88,12 @@ jobs:
         ccache: false
         mixkey: ${{ env.SOURCE_REPO }}-${{ env.REPO_BRANCH }}-${{ env.DEVICE_TARGET }}-${{ env.DEVICE_SUBTARGET }}
         prefix: ${{ env.OPENWRT_PATH }}
-    
+    - name: Install Appfilter
+      run: |
+         cd package
+          mikdir openwrt-packages
+          cd openwrt-packages
+          git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
     - name: Install Feeds
       run: |
         cd $OPENWRT_PATH
