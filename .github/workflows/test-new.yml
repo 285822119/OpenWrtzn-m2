@@ -6,8 +6,11 @@ on:
     - cron: 0 19 * * *
 
 env:
-  REPO_URL: https://github.com/breeze303/ipq60xx-6.6.git
-  REPO_BRANCH: main
+  repos:
+    - url: https://github.com/breeze303/ipq60xx-6.6.git
+      dest_branch: main
+    - url: https://github.com/destan19/OpenAppFilter.git
+      dest_branch: master   
   CONFIG_FILE: configs/ipq60xx-6.6-wifi2.config
   DIY_SCRIPT: diy-mini.sh
   CLASH_KERNEL: amd64
